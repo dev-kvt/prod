@@ -1,4 +1,5 @@
 import {ApiResponse} from "../utils/api-response.js"
+import { asyncHandler} from "../utils/async-handler.js"
 // catch errors with higher order async function 
 /*
 const healthCheck = async (req, res , next) => {
