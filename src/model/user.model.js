@@ -93,18 +93,19 @@ userSchema.methods.generateAccessToken = function(){
 }
 
 userSchema.methods.generateRefreshToken = function(){
-    return jwt.sign({
+    return jwt.sign(
+    {
         _id:this._id,
-        email: thi.email,
+        email: this.email,
         username: this.username,
     },
     process.env.REFRESH_TOKEN_SECRET,
     {expiresIn :process.env.REFRESH_TOKEN_EXPIRY}
 )
 }
-userSchema.methods.generateTemporaryToken = function (){
+/* these are the temporary token can be used to generate pasword change tokens */
+userSchema.methods.generateTemporaryToken = function(){
     const unHashedToken = crypto.randomBytes(20).toString("hex")
-    
     const hashedToken = crypto 
      .createHash("sha256")
      .update(unHashedToken)
