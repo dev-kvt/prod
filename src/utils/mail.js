@@ -48,12 +48,6 @@ const sendEmail = async (options) => {
 
 }
 
-
-
-
-
-
-
 const emailVerificationMailgenContent = ( username , verficationUrl) =>{
     return{
         body:{
@@ -74,7 +68,6 @@ const emailVerificationMailgenContent = ( username , verficationUrl) =>{
 
     };
 };
-
 
 const fogetPasswordMailgenContent = ( username , passwordRestUrl) =>{
     return{
