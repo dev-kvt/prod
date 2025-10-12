@@ -95,4 +95,4 @@ export {
     emailVerificationMailgenContent ,
     fogetPasswordMailgenContent,
     sendEmail,
-}
+};
